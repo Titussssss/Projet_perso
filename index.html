@@ -32,11 +32,11 @@ function resize() {
 resize();
 window.addEventListener("resize", resize);
 
-// Centre du repère, comme dans turtle (0,0 au milieu de l'écran)
+
 function toScreen(x, y) {
   return {
     sx: canvas.width / 2 + x,
-    sy: canvas.height / 2 - y // inversion de l'axe Y (turtle: y monte, canvas: y descend)
+    sy: canvas.height / 2 - y  
   };
 }
 
@@ -45,7 +45,7 @@ ctx.font = "bold 8px Calibri, sans-serif";
 ctx.textAlign = "center";
 ctx.textBaseline = "middle";
 
-// Construction de la liste des points, comme dans le script Python
+ 
 const points = [];
 for (let scale = 11; scale < 17; scale++) {
   for (let i = 0; i < 120; i++) {
@@ -57,7 +57,7 @@ for (let scale = 11; scale < 17; scale++) {
 }
 
 let index = 0;
-const pointsPerFrame = 2; // vitesse d'apparition (augmente pour aller plus vite)
+const pointsPerFrame = 2;  
 
 function draw() {
   if (index < points.length) {
